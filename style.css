@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid limegreen; */
 }
 
 :root {
@@ -37,7 +38,7 @@ li {
   top: 0;
   left: 0;
 }
-
+/* ------------------------Nav--------------- */
 nav {
   display: flex;
   justify-content: space-between;
@@ -73,6 +74,38 @@ nav ul .straight-line {
   position: absolute;
   top: 1rem;
   right: 47rem;
+}
+
+nav ul .fa-bars {
+  display: none;
+}
+
+/* ---------------media query--------------- */
+
+@media screen and (max-width: 1100px) {
+  .straight-line {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav ul li {
+    display: none;
+  }
+
+  nav ul .fa-bars {
+    display: block;
+    color: #72712c;
+    font-size: 25px;
+  }
+
+  #main-image {
+    width: 100%;
+  }
+
+  body {
+    color: #ffffff;
+  }
 }
 
 /* ------------------------Section-1----------------------------- */
@@ -113,7 +146,7 @@ nav ul .straight-line {
   font-size: 9rem;
   color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: #000000;
   font-family: "Merriweather";
   font-weight: 900;
 }
@@ -151,6 +184,59 @@ nav ul .straight-line {
   font-size: 1.5rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+/* -----------media query------ */
+
+@media screen and (max-width: 950px) {
+  .section-1 {
+    justify-content: flex-start;
+    /* flex-direction: column; */
+  }
+  .tivity {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #check-our-package {
+    bottom: -8rem;
+    left: 2rem;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-1 {
+    flex-direction: column;
+  }
+
+  .crea h1 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #9c9a0b;
+  }
+
+  .tivity h2 {
+    font-size: 9rem;
+    font-weight: 900;
+    color: #72712c;
+    font-family: "Merriweather";
+  }
+
+  .tivity p {
+    color: #72712c;
+  }
+
+  .social {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0 3rem;
+    filter: invert(38%) sepia(25%) saturate(1004%) hue-rotate(21deg)
+      brightness(102%) contrast(83%);
+  }
+
+  #check-our-package {
+    background-color: #72712c;
+  }
 }
 
 /* ------------------------Section-2---------------------------- */
@@ -233,6 +319,13 @@ nav ul .straight-line {
   color: #000;
 }
 
+/* -------media query---------- */
+@media screen and (max-width: 950px) {
+  .section-2_left {
+    display: none;
+  }
+}
+
 /* ----------------------------------------------------- */
 .section-2_right {
   /* border: 1px solid black; */
@@ -259,6 +352,11 @@ nav ul .straight-line {
   right: -15rem;
   top: 15rem;
   cursor: pointer;
+}
+@media screen and (max-width: 540px) {
+  .section-2_right {
+    display: none;
+  }
 }
 /* ---------------------------------------------------------------------- */
 
